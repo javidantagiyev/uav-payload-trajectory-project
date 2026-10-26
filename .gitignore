@@ -1,0 +1,35 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.pytest_cache/
+.ruff_cache/
+.coverage
+htmlcov/
+build/
+dist/
+.venv/
+venv/
+
+# Editors and operating systems
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+
+# Research artifacts that must not be committed without review
+.env
+.env.*
+!.env.example
+*.log
+experiments/results/
+data/raw/
+data/private/
+models/checkpoints/
+*.pt
+*.pth
+*.onnx
+*.engine
+
+# generated output
+reports/generated/
