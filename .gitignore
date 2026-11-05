@@ -33,3 +33,6 @@ models/checkpoints/
 
 # generated output
 reports/generated/
+
+# additional files to ignore here
+text.txt
