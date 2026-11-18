@@ -1,7 +1,7 @@
 
 """Ballistic motion model in East-North-Up coordinates."""
 
-from src.physics.gravity import gravity_acceleration
+from src.physics.gravity import G, gravity_acceleration
 from src.physics.aerodynamic_drag import (
     air_velocity,
     drag_acceleration
@@ -15,7 +15,8 @@ def state_derivative(
     density=1.225,
     drag_coefficient=0.0,
     area=0.0,
-    wind=(0.0, 0.0, 0.0)
+    wind=(0.0, 0.0, 0.0),
+    gravity_m_s2=G
 ):
     """Calculate the derivative of the payload state.
 
@@ -45,7 +46,7 @@ def state_derivative(
         area
     )
 
-    gravity = gravity_acceleration()
+    gravity = gravity_acceleration(gravity_m_s2)
 
     acceleration = tuple(
         gravity[i] + drag[i]
@@ -60,3 +61,16 @@ def state_derivative(
         acceleration[1],
         acceleration[2]
     )
+
+
+def model_rhs(t, state, body, atmosphere):
+    """Adapter from validated scenario objects to the canonical dynamics model."""
+    import numpy as np
+    return np.asarray(state_derivative(
+        t, state, mass=body.mass_kg,
+        density=atmosphere.density_kg_m3,
+        drag_coefficient=body.drag_coefficient,
+        area=body.reference_area_m2,
+        wind=atmosphere.wind_m_s,
+        gravity_m_s2=atmosphere.gravity_m_s2,
+    ), dtype=float)

@@ -5,7 +5,7 @@
 Make sure you're in the project root directory:
 
 ```powershell
-cd D:\uav-payload-trajectory-project
+cd <path-to-cloned-repository>
 ```
 
 ### 1. Run a specific test file
@@ -32,3 +32,12 @@ python -m pytest tests/ -v --tb=short
 - `--tb=short`: Displays shorter error tracebacks.
 - Always run tests from the project root.
 - Use `python -m pytest` instead of executing test files directly.
+
+
+## Offline numerical experiment
+
+```bash
+python experiments/offline_dynamics/baseline.py --config configs/offline_dynamics/baseline.json --output results/offline_dynamics/local_run
+```
+
+The whole test suite covers the original `src/physics/` methods as well as the new numerical-verification components. Run it before pushing changes.
