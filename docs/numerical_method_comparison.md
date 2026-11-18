@@ -8,7 +8,7 @@ The experiment reuses the repository's canonical `src/physics/` equations, `src/
 
 ## Methods
 
-The translational state is \(\mathbf y=[x,y,z,v_x,v_y,v_z]^\mathsf T\), expressed in East–North–Up coordinates with SI units. The model has the ordinary differential equation \(\dot{\mathbf y}=f(t,\mathbf y)\) with gravitational acceleration and, where selected, quadratic drag using velocity relative to the assumed air velocity. All other inputs are held constant when changing the integration method.
+The translational state is $\mathbf y=[x,y,z,v_x,v_y,v_z]^\mathsf T$, expressed in East–North–Up coordinates with SI units. The model has the ordinary differential equation $\dot{\mathbf y}=f(t,\mathbf y)$ with gravitational acceleration and, where selected, quadratic drag using velocity relative to the assumed air velocity. All other inputs are held constant when changing the integration method.
 
 The design is a balanced **2 × 2 comparison**:
 
@@ -19,9 +19,9 @@ The design is a balanced **2 × 2 comparison**:
 
 For each pair, the solver is run at maximum time steps of 0.1, 0.05, 0.025, and 0.0125 s, using `configs/baseline.json` (the same input file as the earlier offline verification experiment). Integration always reaches the same final time; if a requested maximum step does not exactly divide the duration, the integrator uses a slightly smaller *actual* step. The table reports both.
 
-Reference solution choice is explicit. The gravity-only reference is analytical. The drag reference is a more finely integrated **numerical approximation**, not a measured trajectory. The comparison metric is the Euclidean terminal position difference \(\|\mathbf r_h(T)-\mathbf r_{\mathrm{ref}}(T)\|_2\), together with the separate velocity difference. These are **not landing errors**.
+Reference solution choice is explicit. The gravity-only reference is analytical. The drag reference is a more finely integrated **numerical approximation**, not a measured trajectory. The comparison metric is the Euclidean terminal position difference $\|\mathbf r_h(T)-\mathbf r_{\mathrm{ref}}(T)\|_2$, together with the separate velocity difference. These are **not landing errors**.
 
-An empirical convergence order is obtained by fitting \(\log(E_h)=p\log(h)+b\) to reference differences above a conservative numerical floor. Near machine precision, the experiment reports the slope as *roundoff-limited* rather than fitting meaningless noise. The theoretical global orders for sufficiently smooth problems are Euler 1 and RK4 4.
+An empirical convergence order is obtained by fitting $\log(E_h)=p\log(h)+b$ to reference differences above a conservative numerical floor. Near machine precision, the experiment reports the slope as *roundoff-limited* rather than fitting meaningless noise. The theoretical global orders for sufficiently smooth problems are Euler 1 and RK4 4.
 
 Computational cost is reported as (i) number of evaluations of the differential equation, calculated from the existing one-step algorithms, and (ii) median wall-clock duration of a complete Python integration across repeated runs, after one warm-up run. Results include memory allocation and trajectory recording overhead. Wall-clock measurements are sensitive to hardware, operating system, Python version, and background load; they are not machine-independent CPU benchmarks.
 
@@ -32,7 +32,7 @@ The laboratory-scale synthetic case uses 0.4 kg mass, 0.02 m² reference area, d
 | Model | Method | Terminal position difference at 0.1 s maximum step | Expected behavior |
 |---|---|---:|---|
 | Gravity only | Euler | 0.490500 m | Approximately first order |
-| Gravity only | RK4 | approximately \(2\times10^{-15}\) m | Roundoff-limited because RK4 integrates this constant-acceleration case to machine precision |
+| Gravity only | RK4 | approximately $2\times10^{-15}\,\mathrm{m}$ | Roundoff-limited because RK4 integrates this constant-acceleration case to machine precision |
 | Quadratic drag | Euler | 0.450985 m | Approximately first order |
 | Quadratic drag | RK4 | 0.000001121 m | Approximately fourth order under step refinement |
 

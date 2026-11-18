@@ -6,23 +6,31 @@ The submitted SDP research report organizes the study around physical-model fide
 
 ## Assumptions and units
 
-The state is `s = [x, y, z, vx, vy, vz]`. The coordinate frame is **local Cartesian**, with `z` positive upward. Positions are measured in metres, velocities in metres per second, time in seconds. All vectors, including the atmospheric velocity, use the same frame. There is no global geographic frame or terrain transformation.
+The state is $\mathbf{s}=[x,y,z,v_x,v_y,v_z]^{\mathsf T}$. The coordinate frame is **local Cartesian**, with $z$ positive upward. Positions are measured in metres, velocities in metres per second, time in seconds. All vectors, including the atmospheric velocity, use the same frame. There is no global geographic frame or terrain transformation.
 
 The simplified point-mass equation is
 
-```text
-position_dot = velocity
-velocity_dot = [0, 0, -g] - (rho * Cd * A / (2*m)) * |velocity - wind| * (velocity - wind)
-```
+$$
+\frac{d\mathbf p}{dt}=\mathbf v,
+$$
+
+$$
+\frac{d\mathbf v}{dt}=
+\begin{bmatrix}0\\0\\-g\end{bmatrix}
+-\frac{\rho C_D A}{2m}\lVert\mathbf v-\mathbf w\rVert(\mathbf v-\mathbf w).
+$$
 
 The assumptions are: constant gravitational acceleration, constant density, constant aerodynamic coefficient, fixed reference area, constant atmospheric velocity, and no rotational dynamics. The scenario parameters are explicit in `configs/baseline.json` and are illustrative rather than measurements.
 
-For `Cd=0` (or zero density/area), the analytical gravity-only reference is
+For $C_D=0$ (or zero air density or reference area), the analytical gravity-only reference is
 
-```text
-position(t) = position0 + velocity0*t + [0, 0, -g*t*t/2]
-velocity(t) = velocity0 + [0, 0, -g*t]
-```
+$$
+\mathbf p(t)=\mathbf p_0+\mathbf v_0 t+\frac12\begin{bmatrix}0\\0\\-g\end{bmatrix}t^2,
+$$
+
+$$
+\mathbf v(t)=\mathbf v_0+\begin{bmatrix}0\\0\\-g\end{bmatrix}t.
+$$
 
 ## Excluded effects
 

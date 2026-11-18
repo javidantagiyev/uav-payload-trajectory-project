@@ -9,7 +9,7 @@ The tracked configuration in `configs/baseline.json` defines one illustrative on
 | Quantity | Baseline result | Interpretation |
 |---|---:|---|
 | Euler gravity-only endpoint difference from exact model | 0.04905 m | Discretization error in an intentionally first-order integrator |
-| RK4 gravity-only endpoint difference from exact model | about 3.2 × 10⁻¹⁵ m | Numerical agreement with the gravity-only closed form |
+| RK4 gravity-only endpoint difference from exact model | about $3.2\times10^{-15}\,\mathrm{m}$ | Numerical agreement with the gravity-only closed form |
 | Drag-model versus gravity-only endpoint difference | about 0.12533 m | Difference in *model outputs*, not measurement error |
 | Mechanical energy under still-air drag | approx. 47.588 to 46.253 J | Expected dissipative behavior under the assumed model |
 
