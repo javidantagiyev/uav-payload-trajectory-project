@@ -1,0 +1,19 @@
+{
+  "study_id": "illustrative_parameter_uncertainty_v1",
+  "description": "Illustrative independent uniform input ranges for a one-second inert-body numerical research case; not sensor error specifications, real-world measurements, or calibrated probabilities.",
+  "seed": 20261118,
+  "sample_count": 256,
+  "integration_step_s": 0.025,
+  "diagnostic_step_s": 0.0125,
+  "diagnostic_sample_count": 24,
+  "parameters": {
+    "mass_kg": 0.04,
+    "reference_area_m2": 0.003,
+    "drag_coefficient": 0.094,
+    "density_kg_m3": 0.06125,
+    "wind_e_m_s": 0.5,
+    "wind_n_m_s": 0.5,
+    "initial_vx_m_s": 0.1,
+    "initial_vy_m_s": 0.1
+  }
+}
