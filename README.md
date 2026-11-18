@@ -10,3 +10,6 @@ Javidan Taghiyev and Shahin Alakbarli
 Dr. Burcu Ramazanli
 
 > **Project status:**
+
+
+- [Controlled Numerical-Method Comparison](docs/numerical_method_comparison.md)
