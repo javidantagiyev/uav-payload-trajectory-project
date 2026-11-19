@@ -1,0 +1,36 @@
+{
+  "dataset_id": "synthetic_gravity_fixture_v1",
+  "declared_provenance": "synthetic",
+  "declared_source": "generated independently from gravity-only analytic motion with deterministic artificial offsets",
+  "provenance_independently_verified": false,
+  "model": "gravity_only",
+  "method": "rk4",
+  "step_s": 0.01,
+  "metrics": {
+    "count": 11,
+    "position_rmse_m": 0.010128342354560345,
+    "position_mean_absolute_error_m": 0.009582364823688806,
+    "position_max_error_m": 0.014546775803986021,
+    "axis_rmse_m": {
+      "x": 0.005519302089048043,
+      "y": 0.0032520026088131097,
+      "z": 0.007845068663388717
+    },
+    "axis_bias_m": {
+      "x": -0.004839304545454034,
+      "y": -0.002192385454545458,
+      "z": -0.004036841818181858
+    }
+  },
+  "observation_sha256": "6c0e3aff5ba1148118c24854de75139f31fc1f896dc57bc9e53893a18d999f81",
+  "metadata_sha256": "05197aec7ab062a4a24edf274aa96b316e4ac248c9ef795088ecd4854b9d67a5",
+  "scenario_sha256": "156ba10312e964bec9f2cbee7c5a0d7dbb00793ceb35390c1d689496584b4b75",
+  "qualifications": [
+    "the input dataset may be synthetic; review declared provenance",
+    "the calculation compares reported observations and predictions at identical times",
+    "linear interpolation of numerical states may contribute small discrepancies",
+    "observations must use the same initial reference frame, units, and clock origin",
+    "simulation agreement alone is not physical model validation",
+    "no fitting, calibration, release optimization, or vehicle control is performed"
+  ]
+}
