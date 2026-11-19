@@ -41,8 +41,16 @@ def run(input_csv, output):
     fig = plt.figure(figsize=(8,6))
     ax = fig.add_subplot(111, projection="3d")
     ax.plot(data["x_m"], data["y_m"], data["z_m"], linewidth=1.5)
+    ax.set_box_aspect((1, 1, 2.5))
+    ax.view_init(elev=22, azim=-60)
     ax.scatter([data["x_m"][0]], [data["y_m"][0]], [data["z_m"][0]], label="first recorded state", s=24)
-    ax.set(xlabel="east x (m)", ylabel="north y (m)", zlabel="up z (m)", title="gazebo 6-dof body path")
+    #ax.set(xlabel="east x (m)", ylabel="north y (m)", zlabel="up z (m)", title="gazebo 6-dof body path")
+    ax.set(
+        xlabel="east x (m)",
+        ylabel="north y (m)",
+        zlabel="up z (m)",
+        title="gazebo 6-dof body path (axes not to scale)"
+    )
     ax.legend(loc="best")
     fig.tight_layout()
     fig.savefig(figures / "trajectory_3d.png", dpi=170)
