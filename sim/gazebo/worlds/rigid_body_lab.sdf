@@ -1,0 +1,72 @@
+<?xml version="1.0" ?>
+<sdf version="1.9">
+  <world name="rigid_body_lab">
+    <gravity>0 0 -9.81</gravity>
+    <physics name="one_millisecond" type="ignored">
+      <max_step_size>0.001</max_step_size>
+      <real_time_factor>1</real_time_factor>
+    </physics>
+    <plugin filename="gz-sim-physics-system" name="gz::sim::systems::Physics"/>
+    <plugin filename="gz-sim-user-commands-system" name="gz::sim::systems::UserCommands"/>
+    <plugin filename="gz-sim-scene-broadcaster-system" name="gz::sim::systems::SceneBroadcaster"/>
+    <plugin filename="gz-sim-sensors-system" name="gz::sim::systems::Sensors">
+      <render_engine>ogre2</render_engine>
+    </plugin>
+    <plugin filename="gz-sim-imu-system" name="gz::sim::systems::Imu"/>
+    <light type="directional" name="sun">
+      <pose>0 0 8 0 0 0</pose>
+      <diffuse>0.8 0.8 0.8 1</diffuse><specular>0.2 0.2 0.2 1</specular>
+      <direction>-0.4 0.2 -0.9</direction>
+    </light>
+    <model name="floor">
+      <static>true</static>
+      <link name="floor_link">
+        <collision name="floor_collision">
+          <geometry><plane><normal>0 0 1</normal><size>25 25</size></plane></geometry>
+          <surface><friction><ode><mu>0.6</mu><mu2>0.6</mu2></ode></friction></surface>
+        </collision>
+        <visual name="floor_visual">
+          <geometry><plane><normal>0 0 1</normal><size>25 25</size></plane></geometry>
+          <material><ambient>0.38 0.4 0.43 1</ambient><diffuse>0.46 0.48 0.52 1</diffuse></material>
+        </visual>
+      </link>
+    </model>
+    <model name="inert_body">
+      <static>false</static>
+      <pose>0 0 2.1 0.18 0.26 0.12</pose>
+      <link name="body">
+        <inertial>
+          <mass>1.2</mass>
+          <inertia>
+            <ixx>0.0130000000</ixx><iyy>0.0270400000</iyy><izz>0.0320400000</izz>
+            <ixy>0</ixy><ixz>0</ixz><iyz>0</iyz>
+          </inertia>
+        </inertial>
+        <collision name="body_collision">
+          <geometry><box><size>0.48 0.3 0.2</size></box></geometry>
+          <surface>
+            <friction><ode><mu>0.55</mu><mu2>0.55</mu2></ode></friction>
+            <bounce><restitution_coefficient>0.15</restitution_coefficient><threshold>0.1</threshold></bounce>
+          </surface>
+        </collision>
+        <visual name="body_visual">
+          <geometry><box><size>0.48 0.3 0.2</size></box></geometry>
+          <material><ambient>0.14 0.43 0.67 1</ambient><diffuse>0.18 0.52 0.79 1</diffuse></material>
+        </visual>
+        <sensor name="body_imu" type="imu">
+          <always_on>true</always_on>
+          <update_rate>100</update_rate>
+          <topic>/sdp/inert_body/imu</topic>
+        </sensor>
+      </link>
+      <plugin filename="gz-sim-odometry-publisher-system" name="gz::sim::systems::OdometryPublisher">
+        <dimensions>3</dimensions>
+        <odom_publish_frequency>100</odom_publish_frequency>
+        <odom_topic>/sdp/inert_body/odometry</odom_topic>
+        <odom_frame>world</odom_frame>
+        <robot_base_frame>inert_body/body</robot_base_frame>
+        <gaussian_noise>0</gaussian_noise>
+      </plugin>
+    </model>
+  </world>
+</sdf>

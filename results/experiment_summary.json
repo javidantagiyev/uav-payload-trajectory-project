@@ -1,0 +1,54 @@
+{
+  "status": "offline_model_verification_only",
+  "scenario_id": "baseline_lab_v1",
+  "scenario_description": "Illustrative one-second, laboratory-scale inert-body dynamics case",
+  "config": {
+    "initial_state": [
+      0.0,
+      0.0,
+      12.0,
+      1.5,
+      0.5,
+      0.0
+    ],
+    "duration_s": 1.0,
+    "body": {
+      "mass_kg": 0.4,
+      "reference_area_m2": 0.02,
+      "drag_coefficient": 0.47
+    },
+    "atmosphere": {
+      "density_kg_m3": 1.225,
+      "wind_m_s": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "gravity_m_s2": 9.81
+    },
+    "numerics": {
+      "maximum_step_s": 0.01,
+      "reference_step_s": 0.0005,
+      "convergence_steps_s": [
+        0.1,
+        0.05,
+        0.025,
+        0.0125
+      ],
+      "timing_repetitions": 7
+    }
+  },
+  "vacuum_euler_position_error_vs_analytic_m": 0.049049999999997596,
+  "vacuum_rk4_position_error_vs_analytic_m": 3.2023728339893768e-15,
+  "drag_vs_vacuum_endpoint_difference_m": 0.12532590524652182,
+  "drag_run_energy_initial_j": 47.58800000000001,
+  "drag_run_energy_final_j": 46.25331270258334,
+  "benchmark_reference": "fine RK4 integration, not an independent physical observation",
+  "limitations": [
+    "no independent field measurements",
+    "uniform atmosphere",
+    "constant Cd and area",
+    "no rotational dynamics",
+    "no UAV control or targeting"
+  ]
+}

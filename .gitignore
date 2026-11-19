@@ -37,3 +37,6 @@ reports/generated/
 # additional files to ignore here
 text.txt
 /my_files/
+
+# Transient local reproducibility runs
+results/**/local_run/

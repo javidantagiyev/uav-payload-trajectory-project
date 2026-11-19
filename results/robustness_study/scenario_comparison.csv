@@ -1,0 +1,7 @@
+scenario_id,description,overrides_json,state_x_m,state_y_m,state_z_m,position_difference_from_nominal_m,coarse_fine_position_difference_m
+nominal,baseline assumptions,{},1.460337778212776,0.48677925940425804,7.213146953953881,0.0,4.092478594219594e-09
+lower_density,illustrative reduced air density,"{""density_kg_m3"": 0.98}",1.468041635855226,0.48934721195174175,7.190247960446522,0.02429624881563734,3.347980787414197e-09
+higher_density,illustrative increased air density,"{""density_kg_m3"": 1.47}",1.4527426121470333,0.48424753738234444,7.235699600498542,0.02393152795228178,4.810167654366396e-09
+crosswind,illustrative constant lateral airflow,"{""wind_e_m_s"": 0.7}",1.480512546276903,0.4878203414230655,7.208910004436641,0.020641144818610516,6.35968454259737e-09
+larger_drag,illustrative larger drag coefficient,"{""drag_coefficient"": 0.6}",1.4498620534328044,0.4832873511442682,7.244246930161258,0.03300216285429304,5.078752640352343e-09
+no_drag,gravity-only reference assumption,"{""drag_coefficient"": 0.0}",1.5000000000000067,0.5,7.09499999999999,0.12532590533318436,9.296750665059115e-15
