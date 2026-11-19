@@ -40,3 +40,4 @@ text.txt
 
 # Transient local reproducibility runs
 results/**/local_run/
+*.zip
