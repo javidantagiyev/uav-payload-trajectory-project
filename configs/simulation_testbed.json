@@ -1,0 +1,31 @@
+{
+  "study_id": "gazebo_rigid_body_lab_v1",
+  "status": "external_simulator_required",
+  "simulator": "gazebo harmonic",
+  "world": "sim/gazebo/worlds/rigid_body_lab.sdf",
+  "world_frame": "ENU",
+  "physics_step_s": 0.001,
+  "body": {
+    "name": "inert_body",
+    "mass_kg": 1.2,
+    "box_size_m": [
+      0.48,
+      0.3,
+      0.2
+    ],
+    "initial_pose_xyz_rpy": [
+      0.0,
+      0.0,
+      2.1,
+      0.18,
+      0.26,
+      0.12
+    ]
+  },
+  "topics": {
+    "odometry": "/sdp/inert_body/odometry",
+    "imu": "/sdp/inert_body/imu"
+  },
+  "intent": "nonoperational free-body mechanics and observation recording",
+  "note": "gazebo does not model aerodynamic drag for this body by default; px4 x500 is a separate experiment"
+}

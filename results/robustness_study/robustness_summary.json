@@ -1,0 +1,112 @@
+{
+  "study_id": "illustrative_robustness_v1",
+  "status": "simulation_only",
+  "physical_validation": false,
+  "endpoint_definition": "state at fixed elapsed time, not ground impact",
+  "scenario_type": "illustrative laboratory-scale inert point mass",
+  "baseline_sha256": "156ba10312e964bec9f2cbee7c5a0d7dbb00793ceb35390c1d689496584b4b75",
+  "robustness_plan_sha256": "708c66744f2f2d3ebb535c6197b68329bc6cc63f87ed4e033645e36e10efbd94",
+  "uncertainty_plan_sha256": "ef73e31efba193577ac2408b3dee77919436e9a8cd0e729a98cca798cb2259a5",
+  "seed": 20261118,
+  "sample_count_per_distribution": 128,
+  "integration_method": "rk4",
+  "step_s": 0.025,
+  "fine_step_s": 0.005,
+  "scenario_results": [
+    {
+      "scenario_id": "nominal",
+      "description": "baseline assumptions",
+      "overrides_json": "{}",
+      "state_x_m": 1.460337778212776,
+      "state_y_m": 0.48677925940425804,
+      "state_z_m": 7.213146953953881,
+      "position_difference_from_nominal_m": 0.0,
+      "coarse_fine_position_difference_m": 4.092478594219594e-09
+    },
+    {
+      "scenario_id": "lower_density",
+      "description": "illustrative reduced air density",
+      "overrides_json": "{\"density_kg_m3\": 0.98}",
+      "state_x_m": 1.468041635855226,
+      "state_y_m": 0.48934721195174175,
+      "state_z_m": 7.190247960446522,
+      "position_difference_from_nominal_m": 0.02429624881563734,
+      "coarse_fine_position_difference_m": 3.347980787414197e-09
+    },
+    {
+      "scenario_id": "higher_density",
+      "description": "illustrative increased air density",
+      "overrides_json": "{\"density_kg_m3\": 1.47}",
+      "state_x_m": 1.4527426121470333,
+      "state_y_m": 0.48424753738234444,
+      "state_z_m": 7.235699600498542,
+      "position_difference_from_nominal_m": 0.02393152795228178,
+      "coarse_fine_position_difference_m": 4.810167654366396e-09
+    },
+    {
+      "scenario_id": "crosswind",
+      "description": "illustrative constant lateral airflow",
+      "overrides_json": "{\"wind_e_m_s\": 0.7}",
+      "state_x_m": 1.480512546276903,
+      "state_y_m": 0.4878203414230655,
+      "state_z_m": 7.208910004436641,
+      "position_difference_from_nominal_m": 0.020641144818610516,
+      "coarse_fine_position_difference_m": 6.35968454259737e-09
+    },
+    {
+      "scenario_id": "larger_drag",
+      "description": "illustrative larger drag coefficient",
+      "overrides_json": "{\"drag_coefficient\": 0.6}",
+      "state_x_m": 1.4498620534328044,
+      "state_y_m": 0.4832873511442682,
+      "state_z_m": 7.244246930161258,
+      "position_difference_from_nominal_m": 0.03300216285429304,
+      "coarse_fine_position_difference_m": 5.078752640352343e-09
+    },
+    {
+      "scenario_id": "no_drag",
+      "description": "gravity-only reference assumption",
+      "overrides_json": "{\"drag_coefficient\": 0.0}",
+      "state_x_m": 1.5000000000000067,
+      "state_y_m": 0.5,
+      "state_z_m": 7.09499999999999,
+      "position_difference_from_nominal_m": 0.12532590533318436,
+      "coarse_fine_position_difference_m": 9.296750665059115e-15
+    }
+  ],
+  "distribution_results": [
+    {
+      "distribution": "uniform",
+      "sample_count": 128,
+      "mean_deviation_m": 0.0784612203922242,
+      "p50_deviation_m": 0.08331450160039805,
+      "p95_deviation_m": 0.11756344067126064,
+      "maximum_sample_deviation_m": 0.13821316573737785
+    },
+    {
+      "distribution": "triangular",
+      "sample_count": 128,
+      "mean_deviation_m": 0.053862159975600885,
+      "p50_deviation_m": 0.05260097002278188,
+      "p95_deviation_m": 0.09275600303154938,
+      "maximum_sample_deviation_m": 0.10609341844228795
+    },
+    {
+      "distribution": "beta22",
+      "sample_count": 128,
+      "mean_deviation_m": 0.06030416996118707,
+      "p50_deviation_m": 0.061482581489951574,
+      "p95_deviation_m": 0.09519159975621136,
+      "maximum_sample_deviation_m": 0.12676555410627274
+    }
+  ],
+  "limitations": [
+    "all scenarios use hypothetical input assumptions",
+    "model comparisons are not independently observed motion",
+    "uncertain inputs are constant within each simulation",
+    "prior comparisons hold interval limits fixed but change distribution shapes",
+    "independent parameter sampling ignores correlations",
+    "finite-sample percentiles are descriptive and not field reliability guarantees",
+    "no vehicle control, release event, or target optimization"
+  ]
+}

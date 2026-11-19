@@ -1,0 +1,16 @@
+{
+  "study_id": "illustrative_robustness_v1",
+  "seed": 20261118,
+  "sample_count": 128,
+  "step_s": 0.025,
+  "fine_step_s": 0.005,
+  "distributions": ["uniform", "triangular", "beta22"],
+  "variants": [
+    {"id": "nominal", "description": "baseline assumptions", "overrides": {}},
+    {"id": "lower_density", "description": "illustrative reduced air density", "overrides": {"density_kg_m3": 0.98}},
+    {"id": "higher_density", "description": "illustrative increased air density", "overrides": {"density_kg_m3": 1.47}},
+    {"id": "crosswind", "description": "illustrative constant lateral airflow", "overrides": {"wind_e_m_s": 0.7}},
+    {"id": "larger_drag", "description": "illustrative larger drag coefficient", "overrides": {"drag_coefficient": 0.60}},
+    {"id": "no_drag", "description": "gravity-only reference assumption", "overrides": {"drag_coefficient": 0.0}}
+  ]
+}

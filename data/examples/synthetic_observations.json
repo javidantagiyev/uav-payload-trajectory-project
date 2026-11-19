@@ -1,0 +1,9 @@
+{
+  "dataset_id": "synthetic_gravity_fixture_v1",
+  "provenance": "synthetic",
+  "source": "generated independently from gravity-only analytic motion with deterministic artificial offsets",
+  "reference_frame": "ENU",
+  "units": "SI",
+  "time_origin": "elapsed_since_initial_state",
+  "description": "illustrative test fixture; not recorded sensor measurements or physical validation"
+}
