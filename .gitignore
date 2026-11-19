@@ -36,3 +36,4 @@ reports/generated/
 
 # additional files to ignore here
 text.txt
+/my_files/
