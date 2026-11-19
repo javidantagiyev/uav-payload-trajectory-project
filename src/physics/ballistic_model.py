@@ -23,6 +23,9 @@ def state_derivative(
     State:
         (x, y, z, vx, vy, vz)
 
+    density can be a number or a function density(z).
+    wind can be a vector or a function wind(t, position).
+
     Returns:
         (vx, vy, vz, ax, ay, az)
     """
@@ -32,7 +35,14 @@ def state_derivative(
     if mass <= 0:
         raise ValueError("Mass must be positive")
 
+    position = tuple(state[0:3])
     vx, vy, vz = state[3:6]
+
+    if callable(density):
+        density = density(position[2])
+
+    if callable(wind):
+        wind = wind(t, position)
 
     velocity = (vx, vy, vz)
 

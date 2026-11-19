@@ -137,3 +137,128 @@ These are **general evaluation definitions**, not equations reproduced from Math
 - First drag model assumes fixed $m$, $C_D$, $A$, and $\rho$.
 - Rotational dynamics, changing orientation, and wind variation with height are deferred.
 - Analytical gravity-only motion serves as the first verification baseline.
+
+---
+
+## 8. ISA atmosphere (troposphere)
+
+Air density changes with altitude. In the troposphere ($-500\ \mathrm m \le h \le 11000\ \mathrm m$ above sea level) the International Standard Atmosphere gives
+
+$$
+T(h)=T_0-Lh,
+$$
+
+$$
+p(h)=p_0\left(\frac{T(h)}{T_0}\right)^{\frac{g_0}{R L}},
+$$
+
+$$
+\rho(h)=\frac{p(h)}{R\,T(h)},
+$$
+
+with $T_0=288.15\ \mathrm K$, $p_0=101325\ \mathrm{Pa}$, $L=0.0065\ \mathrm{K/m}$, $R=287.05\ \mathrm{J/(kg\,K)}$ (specific gas constant of dry air) and $g_0=9.80665\ \mathrm{m/s^2}$. The exponent $g_0/(RL)\approx5.256$ is the same as $g_0M/(R^{*}L)$ written with the universal gas constant $R^{*}$ and molar mass $M$.
+
+The simulation uses height above ground $z$, so the density seen by the payload is
+
+$$
+\rho(z)=\rho_{\mathrm{ISA}}(h_g+z),
+$$
+
+where $h_g$ is the ground elevation above sea level (Baku: $h_g\approx-28\ \mathrm m$). Reference values: $\rho(0)\approx1.225\ \mathrm{kg/m^3}$, $\rho(1000\ \mathrm m)\approx1.112\ \mathrm{kg/m^3}$.
+
+## 9. Payload parameters, ballistic coefficient and terminal velocity
+
+The drag model needs the frontal (reference) area $A$ and drag coefficient $C_D$:
+
+$$
+A_{\mathrm{sphere}}=\frac{\pi d^2}{4},\qquad
+A_{\mathrm{box}}=l\,w.
+$$
+
+The box is assumed to fall mostly vertically, so its bottom face $l\times w$ is used. Typical values are $C_D\approx0.47$ (sphere) and $C_D\approx1.05$ (box face-on).
+
+The **ballistic coefficient** combines these into one number:
+
+$$
+\beta=\frac{m}{C_D A}\quad[\mathrm{kg/m^2}].
+$$
+
+A larger $\beta$ means drag slows the payload less. At **terminal velocity** drag balances gravity, $mg=\tfrac12\rho C_D A v_t^2$, so
+
+$$
+v_t=\sqrt{\frac{2mg}{\rho C_D A}}=\sqrt{\frac{2g\beta}{\rho}}.
+$$
+
+## 10. Release state and attitude rotation
+
+The payload starts from the UAV state, corrected for the mount position, any ejection velocity and the UAV rotation.
+
+**Body frame:** $x_b$ forward, $y_b$ left, $z_b$ up. With zero attitude the body axes coincide with ENU, so the nose points East. Yaw $\psi$ is measured from East, counter-clockwise (towards North). Roll $\phi$, pitch $\theta$ and yaw $\psi$ are applied in Z–Y–X order:
+
+$$
+R=R_z(\psi)\,R_y(\theta)\,R_x(\phi),
+$$
+
+$$
+R_x(\phi)=\begin{bmatrix}1&0&0\0&\cos\phi&-\sin\phi\0&\sin\phi&\cos\phi\end{bmatrix},\quad
+R_y(\theta)=\begin{bmatrix}\cos\theta&0&\sin\theta\0&1&0\-\sin\theta&0&\cos\theta\end{bmatrix},\quad
+R_z(\psi)=\begin{bmatrix}\cos\psi&-\sin\psi&0\\sin\psi&\cos\psi&0\0&0&1\end{bmatrix}.
+$$
+
+$R$ maps a body-frame vector into ENU. With $z_b$ up, a positive pitch lowers the nose and a positive roll lifts the left side.
+
+With mount offset $\mathbf r_b$ and ejection velocity $\mathbf u_b$ (body frame), and UAV angular velocity $\boldsymbol\omega$ (ENU, rad/s), the release state is
+
+$$
+\mathbf p_0=\mathbf p_{\mathrm{UAV}}+R\,\mathbf r_b,
+$$
+
+$$
+\mathbf v_0=\mathbf v_{\mathrm{UAV}}+R\,\mathbf u_b+\boldsymbol\omega\times(R\,\mathbf r_b).
+$$
+
+The last term is the lever-arm velocity of the mount point caused by UAV rotation.
+
+## 11. Analytical vertical drop with quadratic drag
+
+For a drop from rest at height $z_0$, with constant density, no wind and purely vertical motion, the dynamics of Section 5 reduce to $\dot v=-g+\frac{g}{v_t^2}v^2$ (with $v\le0$). Its solution is
+
+$$
+v(t)=-v_t\tanh\!\left(\frac{gt}{v_t}\right),
+$$
+
+$$
+z(t)=z_0-\frac{v_t^2}{g}\ln\cosh\!\left(\frac{gt}{v_t}\right).
+$$
+
+Setting $z(t)=0$ gives the landing time
+
+$$
+t_{\mathrm{land}}=\frac{v_t}{g}\,\operatorname{arcosh}\!\left(\exp\frac{z_0 g}{v_t^2}\right).
+$$
+
+For large arguments $\cosh$ and $\exp$ overflow in floating point, so the implementation uses the equivalent forms
+
+$$
+\ln\cosh x=x+\ln\!\left(1+e^{-2x}\right)-\ln2,\qquad
+\operatorname{arcosh}(e^{a})=a+\ln\!\left(1+\sqrt{1-e^{-2a}}\right),
+$$
+
+valid for $x,a\ge0$. This closed-form solution is the reference for checking the Euler and RK4 integrators with drag: halving the step should halve the Euler error (first order) and divide the RK4 error by about 16 (fourth order).
+
+## 12. Ground-impact interpolation
+
+The integrator uses a fixed step $h$, so the last step usually ends below the ground. If $z_n>z_g$ and $z_{n+1}\le z_g$, the impact fraction is
+
+$$
+\lambda=\frac{z_n-z_g}{z_n-z_{n+1}},\qquad 0<\lambda\le1,
+$$
+
+and the impact time and state are found by linear interpolation:
+
+$$
+t_{\mathrm{impact}}=t_n+\lambda h,\qquad
+\mathbf s_{\mathrm{impact}}=\mathbf s_n+\lambda\left(\mathbf s_{n+1}-\mathbf s_n\right).
+$$
+
+Linear interpolation has a local error of order $h^2$. For RK4 this interpolation error, not the RK4 step itself, limits the landing-point accuracy at larger steps.

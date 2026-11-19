@@ -1,0 +1,141 @@
+{
+  "sample_count": 500,
+  "seed": 42,
+  "step_size": 0.02,
+  "nominal": {
+    "mass": 1.0,
+    "area": 0.017671458676442587,
+    "drag_coefficient": 0.47,
+    "density": 1.225,
+    "wind_speed": 6.0,
+    "wind_direction": 270.0,
+    "release_x": 0.0,
+    "release_y": 0.0,
+    "release_z": 500.0,
+    "release_vx": 15.0,
+    "release_vy": 0.0,
+    "release_vz": 0.0,
+    "release_delay": 0.0
+  },
+  "sigmas": {
+    "drag_coefficient": 0.047,
+    "mass": 0.02,
+    "density": 0.03675,
+    "wind_speed": 1.5,
+    "wind_direction": 15.0,
+    "release_x": 1.5,
+    "release_y": 1.5,
+    "release_z": 2.0,
+    "release_vx": 0.3,
+    "release_vy": 0.3,
+    "release_vz": 0.3,
+    "release_delay": 0.1
+  },
+  "profiles": {
+    "constant": {
+      "nominal_landing": {
+        "x": 145.04176325735997,
+        "y": 8.93369068201028e-15,
+        "flight_time": 14.532725578334471
+      },
+      "statistics": {
+        "mean_x": 143.17671751712456,
+        "mean_y": -0.7013074199348718,
+        "std_x": 13.155571103808603,
+        "std_y": 13.058428139532692,
+        "cep50": 14.99030927337439,
+        "cep95": 33.01817240979966,
+        "rms": 18.624570895997678,
+        "fraction_within_10m": 0.276
+      },
+      "ellipse95": {
+        "center_x": 143.17671751712456,
+        "center_y": -0.7013074199348718,
+        "semi_major": 32.24773665451519,
+        "semi_minor": 31.91708555038935,
+        "angle_deg": 22.008429070892646
+      },
+      "sensitivity_oat": {
+        "wind_direction": 12.736834711289905,
+        "wind_speed": 12.629225233766022,
+        "release_vy": 1.9281190043343517,
+        "release_vx": 1.8344273313474702,
+        "release_x": 1.5000000000000284,
+        "release_delay": 1.5000000000000284,
+        "release_y": 1.5,
+        "release_vz": 0.381646686100126,
+        "release_z": 0.30474915400819214,
+        "drag_coefficient": 0.2236661636510746,
+        "density": 0.0677244646911106,
+        "mass": 0.04529707367770186
+      },
+      "correlation_with_miss": {
+        "drag_coefficient": 0.24620256434859147,
+        "release_z": 0.09358616137091229,
+        "wind_direction": 0.08871596055645906,
+        "release_vx": 0.06832362618901175,
+        "release_x": 0.06385103204212562,
+        "release_y": 0.04604809967980284,
+        "release_delay": 0.04335299105422727,
+        "density": 0.036058703366182075,
+        "release_vy": 0.03537080220091673,
+        "mass": 0.028538746728522035,
+        "release_vz": 0.02469713316660645,
+        "wind_speed": 0.013189330745455282
+      }
+    },
+    "power_law": {
+      "nominal_landing": {
+        "x": 175.4295382878108,
+        "y": 1.4063758115338978e-14,
+        "flight_time": 14.498867793369241
+      },
+      "statistics": {
+        "mean_x": 172.28764008329895,
+        "mean_y": -1.1291372560349937,
+        "std_x": 20.060317874981422,
+        "std_y": 20.566391586019602,
+        "cep50": 22.770425482722544,
+        "cep95": 50.532098516569505,
+        "rms": 28.894437280435977,
+        "fraction_within_10m": 0.14
+      },
+      "ellipse95": {
+        "center_x": 172.28764008329895,
+        "center_y": -1.1291372560349937,
+        "semi_major": 50.36733816016757,
+        "semi_minor": 49.07589063734604,
+        "angle_deg": 81.78783234543357
+      },
+      "sensitivity_oat": {
+        "wind_direction": 20.109881229808686,
+        "wind_speed": 19.378943587308868,
+        "drag_coefficient": 2.606658918937356,
+        "release_vy": 1.9773080279124975,
+        "release_vx": 1.9545026435508248,
+        "release_x": 1.5000000000000284,
+        "release_delay": 1.5000000000000284,
+        "release_y": 1.5,
+        "density": 0.7822821717541615,
+        "mass": 0.5217399926966522,
+        "release_z": 0.5000369489459473,
+        "release_vz": 0.43810207354815134
+      },
+      "correlation_with_miss": {
+        "drag_coefficient": 0.23388346165060622,
+        "wind_direction": 0.09159739670078644,
+        "release_z": 0.08527616261987427,
+        "release_vx": 0.06809533340334473,
+        "release_x": 0.05825210353265535,
+        "density": 0.03952852440686664,
+        "release_delay": 0.03421434673468373,
+        "release_y": 0.03384370995054655,
+        "mass": 0.03330725776933759,
+        "release_vy": 0.032942447616457135,
+        "release_vz": 0.019717563450846663,
+        "wind_speed": 0.012662406470824691
+      }
+    }
+  },
+  "nominal_landing_difference_m": 30.387775030450825
+}

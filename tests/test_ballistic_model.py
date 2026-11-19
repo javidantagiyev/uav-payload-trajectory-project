@@ -66,3 +66,35 @@ def test_invalid_mass():
             (0, 0, 100, 0, 0, 0),
             mass=0
         )
+
+
+def test_wind_function():
+    def wind(t, position):
+        return (5, 0, 0)
+
+    result = state_derivative(
+        0,
+        (0, 0, 100, 5, 0, 0),
+        mass=1,
+        drag_coefficient=0.8,
+        area=0.02,
+        wind=wind
+    )
+
+    assert result[3] == pytest.approx(0)
+
+
+def test_density_function():
+    def density(z):
+        return 0.0
+
+    result = state_derivative(
+        0,
+        (0, 0, 100, 10, 0, 0),
+        mass=1,
+        density=density,
+        drag_coefficient=0.8,
+        area=0.02
+    )
+
+    assert result[3] == pytest.approx(0)
