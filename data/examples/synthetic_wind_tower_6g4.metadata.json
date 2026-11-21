@@ -1,0 +1,13 @@
+{
+  "data_kind": "synthetic",
+  "provider": "SDP internal synthetic example",
+  "dataset_id": "6g4_synthetic_tower_fixture",
+  "dataset_version": "1",
+  "source_url": "internal-generated-fixture-v1",
+  "station_id": "synthetic_cabauw_like",
+  "height_datum": "AGL_m",
+  "time_basis": "UTC_ISO8601",
+  "wind_units": "ENU_m_s",
+  "data_license": "internal synthetic fixture, no measured observations",
+  "notes": "24 illustrative timestamps across eight artificial days; nonlinear variation and wind veer inserted deliberately. NOT KNMI DATA."
+}

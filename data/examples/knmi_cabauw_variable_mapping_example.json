@@ -1,0 +1,11 @@
+{
+  "time": "time",
+  "levels": {
+    "10": {"speed": "F010", "direction_from": "D010"},
+    "20": {"speed": "F020", "direction_from": "D020"},
+    "40": {"speed": "F040", "direction_from": "D040"},
+    "80": {"speed": "F080", "direction_from": "D080"},
+    "140": {"speed": "F140", "direction_from": "D140"},
+    "200": {"speed": "F200", "direction_from": "D200"}
+  }
+}
