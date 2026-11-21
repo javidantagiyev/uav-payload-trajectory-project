@@ -43,3 +43,20 @@ results/**/local_run/
 *.zip
 
 *Zone.Identifier
+
+# Local observation datasets and incomplete downloads
+/results/**/raw/
+/results/**/raw_dwd/
+*.part
+
+# Local repository maintenance files
+/repository_cleanup_audit.txt
+/repository_structure_audit.txt
+/atmospheric_tree.txt
+
+# Legacy local experimental outputs
+/results/atmospheric_testbed/
+
+# Archive and operating-system artifacts
+*.[zZ][iI][pP]
+*Zone.Identifier*

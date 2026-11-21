@@ -1,0 +1,71 @@
+variable,description,height_m,status,source_units,total,missing_or_nonfinite,basic_range_violation,finite_in_basic_range
+F,mean wind speed,200.0,inspected,m s-1,4464,1,0,4463
+F,mean wind speed,140.0,inspected,m s-1,4464,1,0,4463
+F,mean wind speed,80.0,inspected,m s-1,4464,1,0,4463
+F,mean wind speed,40.0,inspected,m s-1,4464,3,0,4461
+F,mean wind speed,20.0,inspected,m s-1,4464,4,0,4460
+F,mean wind speed,10.0,inspected,m s-1,4464,5,0,4459
+F,mean wind speed,2.0,inspected,m s-1,4464,4464,0,0
+D,mean wind FROM direction,200.0,inspected,degree,4464,1,0,4463
+D,mean wind FROM direction,140.0,inspected,degree,4464,1,0,4463
+D,mean wind FROM direction,80.0,inspected,degree,4464,1,0,4463
+D,mean wind FROM direction,40.0,inspected,degree,4464,2,0,4462
+D,mean wind FROM direction,20.0,inspected,degree,4464,4,0,4460
+D,mean wind FROM direction,10.0,inspected,degree,4464,0,0,4464
+D,mean wind FROM direction,2.0,inspected,degree,4464,4464,0,0
+PF,maximum wind speed,200.0,inspected,m s-1,4464,2,0,4462
+PF,maximum wind speed,140.0,inspected,m s-1,4464,2,0,4462
+PF,maximum wind speed,80.0,inspected,m s-1,4464,2,0,4462
+PF,maximum wind speed,40.0,inspected,m s-1,4464,5,0,4459
+PF,maximum wind speed,20.0,inspected,m s-1,4464,5,0,4459
+PF,maximum wind speed,10.0,inspected,m s-1,4464,5,0,4459
+PF,maximum wind speed,2.0,inspected,m s-1,4464,4464,0,0
+MF,"minimum wind speed, not corrected",200.0,inspected,m s-1,4464,2,0,4462
+MF,"minimum wind speed, not corrected",140.0,inspected,m s-1,4464,2,0,4462
+MF,"minimum wind speed, not corrected",80.0,inspected,m s-1,4464,2,0,4462
+MF,"minimum wind speed, not corrected",40.0,inspected,m s-1,4464,5,0,4459
+MF,"minimum wind speed, not corrected",20.0,inspected,m s-1,4464,5,0,4459
+MF,"minimum wind speed, not corrected",10.0,inspected,m s-1,4464,5,0,4459
+MF,"minimum wind speed, not corrected",2.0,inspected,m s-1,4464,4464,0,0
+SF,standard deviation of wind speed,200.0,inspected,m s-1,4464,2,0,4462
+SF,standard deviation of wind speed,140.0,inspected,m s-1,4464,2,0,4462
+SF,standard deviation of wind speed,80.0,inspected,m s-1,4464,2,0,4462
+SF,standard deviation of wind speed,40.0,inspected,m s-1,4464,5,0,4459
+SF,standard deviation of wind speed,20.0,inspected,m s-1,4464,5,0,4459
+SF,standard deviation of wind speed,10.0,inspected,m s-1,4464,5,0,4459
+SF,standard deviation of wind speed,2.0,inspected,m s-1,4464,4464,0,0
+SD,standard deviation of wind direction,200.0,inspected,degree,4464,2,0,4462
+SD,standard deviation of wind direction,140.0,inspected,degree,4464,2,0,4462
+SD,standard deviation of wind direction,80.0,inspected,degree,4464,3,0,4461
+SD,standard deviation of wind direction,40.0,inspected,degree,4464,5,0,4459
+SD,standard deviation of wind direction,20.0,inspected,degree,4464,5,0,4459
+SD,standard deviation of wind direction,10.0,inspected,degree,4464,0,0,4464
+SD,standard deviation of wind direction,2.0,inspected,degree,4464,4464,0,0
+TA,air temperature,200.0,inspected,K,4464,26,0,4438
+TA,air temperature,140.0,inspected,K,4464,3,0,4461
+TA,air temperature,80.0,inspected,K,4464,5,0,4459
+TA,air temperature,40.0,inspected,K,4464,5,0,4459
+TA,air temperature,20.0,inspected,K,4464,4,0,4460
+TA,air temperature,10.0,inspected,K,4464,7,0,4457
+TA,air temperature,2.0,inspected,K,4464,4,0,4460
+TD,dew point temperature,200.0,inspected,K,4464,19,0,4445
+TD,dew point temperature,140.0,inspected,K,4464,3,0,4461
+TD,dew point temperature,80.0,inspected,K,4464,5,0,4459
+TD,dew point temperature,40.0,inspected,K,4464,5,0,4459
+TD,dew point temperature,20.0,inspected,K,4464,4,0,4460
+TD,dew point temperature,10.0,inspected,K,4464,7,0,4457
+TD,dew point temperature,2.0,inspected,K,4464,4,0,4460
+Q,specific humidity,200.0,inspected,g kg-1,4464,19,0,4445
+Q,specific humidity,140.0,inspected,g kg-1,4464,3,0,4461
+Q,specific humidity,80.0,inspected,g kg-1,4464,5,0,4459
+Q,specific humidity,40.0,inspected,g kg-1,4464,5,0,4459
+Q,specific humidity,20.0,inspected,g kg-1,4464,4,0,4460
+Q,specific humidity,10.0,inspected,g kg-1,4464,7,0,4457
+Q,specific humidity,2.0,inspected,g kg-1,4464,4,0,4460
+ZMA,visibility,200.0,inspected,m,4464,2,0,4462
+ZMA,visibility,140.0,inspected,m,4464,4,0,4460
+ZMA,visibility,80.0,inspected,m,4464,4,0,4460
+ZMA,visibility,40.0,inspected,m,4464,2,0,4462
+ZMA,visibility,20.0,inspected,m,4464,4,0,4460
+ZMA,visibility,10.0,inspected,m,4464,4,0,4460
+ZMA,visibility,2.0,inspected,m,4464,0,0,4464

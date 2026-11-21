@@ -1,0 +1,62 @@
+{
+  "status": "descriptive_thermodynamic_climatology_only",
+  "source_sha256": "97f6a73542473193e6d6ad7a8c08c59ebe832b1cd3e2706811926c854f16ec0f",
+  "expected_hash_matched": true,
+  "timestamps": 4464,
+  "utc_days": 31,
+  "height_levels_m": [
+    2.0,
+    10.0,
+    20.0,
+    40.0,
+    80.0,
+    140.0,
+    200.0
+  ],
+  "maximum_grid_offset_s": 0.073242188,
+  "missing_grid_slots": 0,
+  "basic_range_audit": {
+    "TA": {
+      "nonfinite": 54,
+      "finite_outside_basic_range": 0
+    },
+    "TD": {
+      "nonfinite": 47,
+      "finite_outside_basic_range": 0
+    },
+    "Q": {
+      "nonfinite": 47,
+      "finite_outside_basic_range": 0
+    },
+    "ZMA": {
+      "nonfinite": 20,
+      "finite_outside_basic_range": 0
+    }
+  },
+  "dewpoint_temperature_joint_valid": 31194,
+  "dewpoint_above_air_temperature_count": 1725,
+  "temperature_difference_thresholds_K": [
+    0.0,
+    0.1,
+    0.5
+  ],
+  "figures": [
+    "TA_time_height.png",
+    "Q_time_height.png",
+    "TD_time_height.png",
+    "ZMA_time_height.png",
+    "temperature_difference_full.png",
+    "temperature_difference_first_72h.png",
+    "TA_diurnal.png",
+    "Q_diurnal.png",
+    "dewpoint_depression_K_diurnal.png"
+  ],
+  "limitations": [
+    "Positive layer temperature difference describes observed temperature structure, not a complete stability diagnosis.",
+    "Thresholds are descriptive sensitivity checks, not instrument uncertainty estimates.",
+    "Run duration counts contiguous qualifying ten-minute records, not resolved continuous inversion duration.",
+    "Repeated visibility values at 20000 m are a diagnostic, not proof of censoring.",
+    "No imputation, no physical-model fitting, no wind estimation or simulation integration.",
+    "One site and observation period; no generalization claim."
+  ]
+}

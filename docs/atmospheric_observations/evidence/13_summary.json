@@ -1,0 +1,49 @@
+{
+  "status": "surface_climate_statistics",
+  "summary_sha256": "e14f0cce324f09b0455ae3b1229939ee9090fee9688783d1d3fa6a88ffb52e41",
+  "monthly_rows": 72,
+  "below_90_percent": 2,
+  "iqr_containment_rows": 72,
+  "sensitivity_rows": 24,
+  "leave_one_month_out_rows": 68,
+  "dwd_sources": [
+    {
+      "station": "01975",
+      "sha256": "9c5fc78c452f48c8b21701078b2f3aaa0d68b13b699753ff4df8411cfbc7c7ec",
+      "timestamp_records": 52560,
+      "quality_codes": {
+        "3": 52560
+      },
+      "file": "/home/shale/projects/uav-payload-trajectory-project/results/atmospheric_testbed/6g_batch12/raw_dwd/10minutenwerte_TU_01975_20200101_20251231_hist.zip"
+    },
+    {
+      "station": "03015",
+      "sha256": "3f743ebef96aae982664ea05d42cc34f9298f865d97356e089845cb9c7ca645b",
+      "timestamp_records": 52560,
+      "quality_codes": {
+        "3": 52560
+      },
+      "file": "/home/shale/projects/uav-payload-trajectory-project/results/atmospheric_testbed/6g_batch12/raw_dwd/10minutenwerte_TU_03015_20200101_20251231_hist.zip"
+    }
+  ],
+  "figures": [
+    "coverage_TA.png",
+    "coverage_TD.png",
+    "daily_TA.png",
+    "daily_TD.png",
+    "lags_TA.png",
+    "lags_TD.png",
+    "sensitivity_TA.png",
+    "sensitivity_TD.png"
+  ],
+  "limitations": [
+    "Equal-weight averages of monthly medians are not annual medians.",
+    "Omitted-month and cutoff results are sensitivity checks, not confidence intervals.",
+    "Daily correlations are pairwise descriptive statistics, not conventional full-series ACF or forecasts.",
+    "Month centering does not establish stationarity.",
+    "No instrument calibration uncertainty inferred from quality codes.",
+    "Median bounds address missing data only; no measurement-error allowance.",
+    "Cabauw raw daily records not processed; comparisons use existing nominal surface summaries.",
+    "No wind, vertical profile model, flight model, or trajectory analysis."
+  ]
+}
