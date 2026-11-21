@@ -1,5 +1,26 @@
 # UAV Payload Trajectory Project
 
+## Research Status
+
+Under active development.
+
+Completed investigations and outstanding scientific
+limitations are distinguished in the technical documentation.
+
+## Project Team
+
+Institution: ADA University
+
+Academic Supervisor:
+- Dr. Burcu Ramazanli
+
+Project Members:
+
+- Javidan Taghiyev
+- Shahin Alakbarli
+
+
+
 ## Overview
 
 This repository contains scientific software, numerical
@@ -66,22 +87,5 @@ Source information, checksums, processing procedures,
 and measurement limitations are documented in the
 associated research reports.
 
-## Research Status
 
-Under active development.
 
-Completed investigations and outstanding scientific
-limitations are distinguished in the technical documentation.
-
-## Project Team
-
-Institution: ADA University
-
-Project Members:
-
-- Javidan Taghiyev
-- Shahin Alakbarli
-
-Academic Supervisor:
-
-- Dr. Burcu Ramazanli
