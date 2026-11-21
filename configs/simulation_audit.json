@@ -1,0 +1,11 @@
+{
+  "study_id": "gazebo_inert_body_quality_v1",
+  "source": "results/simulation_testbed/local_run/rigid_body_6dof.csv",
+  "output": "results/simulation_testbed/local_run",
+  "free_flight_until_s": 0.5,
+  "expected_g_m_s2": 9.81,
+  "initial_disagreement_threshold_m_s": 2.0,
+  "gravity_tolerance_m_s2": 0.1,
+  "position_fit_tolerance_m": 0.01,
+  "velocity_consistency_tolerance_m_s": 0.1
+}

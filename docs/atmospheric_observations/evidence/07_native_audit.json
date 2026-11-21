@@ -1,0 +1,65 @@
+{
+  "time": {
+    "sample_count": 4464,
+    "first_decoded_utc": "2026-10-01 00:00:00+00:00",
+    "last_decoded_utc": "2026-10-31 23:49:59.926757812+00:00",
+    "nonzero_grid_offset_count": 2976,
+    "max_absolute_grid_offset_s": 0.073242188,
+    "nearest_grid_collision_count": 0,
+    "missing_nearest_grid_slots_within_span": 0,
+    "offset_quantiles_s": [
+      -0.073242188,
+      -0.018310547,
+      0.0,
+      0.018310546,
+      0.073242187
+    ],
+    "timestamps_modified": false
+  },
+  "time_bounds": {
+    "status": "bounds_inspected",
+    "minimum_width_s": 599.853515625,
+    "maximum_width_s": 600.073242188,
+    "nonpositive_width_count": 0,
+    "outside_bound_count": 0,
+    "adjacent_overlap_count": 0,
+    "adjacent_gap_count": 0
+  },
+  "height_levels_m": [
+    200.0,
+    140.0,
+    80.0,
+    40.0,
+    20.0,
+    10.0,
+    2.0
+  ],
+  "status": "descriptive_observational_audit_not_instrument_validation",
+  "sha256": "97f6a73542473193e6d6ad7a8c08c59ebe832b1cd3e2706811926c854f16ec0f",
+  "expected_hash_matched": true,
+  "raw_time_encoding": {
+    "dtype": "float32",
+    "attributes": {
+      "units": "hours since 2026-10-01 00:00:00 0:00",
+      "long_name": "hours since 2026-10-01 00:00:00 (UTC)",
+      "standard_name": "time",
+      "axis": "T",
+      "bounds": "time_bnds"
+    },
+    "raw_first": "0.0",
+    "raw_last": "743.8333"
+  },
+  "limitations": [
+    "range checks and missingness do not certify provider QC",
+    "native timestamps preserved; nearest-grid offsets are diagnostics only",
+    "wind auxiliary variables are interval statistics, not high-frequency samples or QC flags",
+    "temperature differences are not a complete atmospheric stability diagnosis; no flux or pressure-derived stability classification",
+    "single site and month; no forecast or simulation validation"
+  ],
+  "figures": [
+    "daily_TA.png",
+    "daily_TD.png",
+    "daily_Q.png",
+    "daily_ZMA.png"
+  ]
+}

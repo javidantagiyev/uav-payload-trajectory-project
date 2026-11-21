@@ -1,0 +1,447 @@
+{
+  "status": "descriptive_thermodynamic_seasonal_study",
+  "requested_months": [
+    "2025-01",
+    "2025-02",
+    "2025-03",
+    "2025-04",
+    "2025-05",
+    "2025-06",
+    "2025-07",
+    "2025-08",
+    "2025-09",
+    "2025-10",
+    "2025-11",
+    "2025-12"
+  ],
+  "processed_months": 12,
+  "expected_intervals": 52560,
+  "observed_intervals": 52560,
+  "height_levels_m": [
+    2.0,
+    10.0,
+    20.0,
+    40.0,
+    80.0,
+    140.0,
+    200.0
+  ],
+  "source_inventory": [
+    {
+      "month": "2025-01",
+      "filename": "cesar_tower_meteo_lb1_t10_v1.3_202501.nc",
+      "sha256": "3df94f81039e48417ac7a265525f68df4d2bc2b037918aa405c8390843a92d0f",
+      "expected_intervals": 4464,
+      "observed_intervals": 4464,
+      "missing_intervals": 0,
+      "max_native_offset_s": 0.073242188,
+      "basic_range_audit": {
+        "TA": {
+          "nonfinite": 45,
+          "finite_outside_basic_range": 0
+        },
+        "TD": {
+          "nonfinite": 275,
+          "finite_outside_basic_range": 0
+        },
+        "Q": {
+          "nonfinite": 276,
+          "finite_outside_basic_range": 0
+        },
+        "ZMA": {
+          "nonfinite": 14,
+          "finite_outside_basic_range": 0
+        }
+      },
+      "status": "processed"
+    },
+    {
+      "month": "2025-02",
+      "filename": "cesar_tower_meteo_lb1_t10_v1.3_202502.nc",
+      "sha256": "689eacd1068944fcc454d016c26a4676ebf70ce1987d776d3810c172f1c89f4f",
+      "expected_intervals": 4032,
+      "observed_intervals": 4032,
+      "missing_intervals": 0,
+      "max_native_offset_s": 0.073242188,
+      "basic_range_audit": {
+        "TA": {
+          "nonfinite": 26,
+          "finite_outside_basic_range": 0
+        },
+        "TD": {
+          "nonfinite": 26,
+          "finite_outside_basic_range": 0
+        },
+        "Q": {
+          "nonfinite": 26,
+          "finite_outside_basic_range": 0
+        },
+        "ZMA": {
+          "nonfinite": 745,
+          "finite_outside_basic_range": 0
+        }
+      },
+      "status": "processed"
+    },
+    {
+      "month": "2025-03",
+      "filename": "cesar_tower_meteo_lb1_t10_v1.3_202503.nc",
+      "sha256": "3d61cf1c0940512ab18a277d53b0ccd6ad2f50c78786819c2a1480445a93ad7a",
+      "expected_intervals": 4464,
+      "observed_intervals": 4464,
+      "missing_intervals": 0,
+      "max_native_offset_s": 0.073242188,
+      "basic_range_audit": {
+        "TA": {
+          "nonfinite": 181,
+          "finite_outside_basic_range": 0
+        },
+        "TD": {
+          "nonfinite": 181,
+          "finite_outside_basic_range": 0
+        },
+        "Q": {
+          "nonfinite": 216,
+          "finite_outside_basic_range": 0
+        },
+        "ZMA": {
+          "nonfinite": 164,
+          "finite_outside_basic_range": 0
+        }
+      },
+      "status": "processed"
+    },
+    {
+      "month": "2025-04",
+      "filename": "cesar_tower_meteo_lb1_t10_v1.3_202504.nc",
+      "sha256": "9a675dee968d53fc50015468053fe6869855c2c3406707d94a5ca3df4a7c8d3d",
+      "expected_intervals": 4320,
+      "observed_intervals": 4320,
+      "missing_intervals": 0,
+      "max_native_offset_s": 0.073242188,
+      "basic_range_audit": {
+        "TA": {
+          "nonfinite": 99,
+          "finite_outside_basic_range": 0
+        },
+        "TD": {
+          "nonfinite": 120,
+          "finite_outside_basic_range": 0
+        },
+        "Q": {
+          "nonfinite": 120,
+          "finite_outside_basic_range": 0
+        },
+        "ZMA": {
+          "nonfinite": 5019,
+          "finite_outside_basic_range": 0
+        }
+      },
+      "status": "processed"
+    },
+    {
+      "month": "2025-05",
+      "filename": "cesar_tower_meteo_lb1_t10_v1.3_202505.nc",
+      "sha256": "cf93db9ec2d8808f51244ca703fa65fb2ae72ce00f221277a8ce32a32b5f67a6",
+      "expected_intervals": 4464,
+      "observed_intervals": 4464,
+      "missing_intervals": 0,
+      "max_native_offset_s": 0.073242188,
+      "basic_range_audit": {
+        "TA": {
+          "nonfinite": 109,
+          "finite_outside_basic_range": 0
+        },
+        "TD": {
+          "nonfinite": 415,
+          "finite_outside_basic_range": 0
+        },
+        "Q": {
+          "nonfinite": 415,
+          "finite_outside_basic_range": 0
+        },
+        "ZMA": {
+          "nonfinite": 17862,
+          "finite_outside_basic_range": 0
+        }
+      },
+      "status": "processed"
+    },
+    {
+      "month": "2025-06",
+      "filename": "cesar_tower_meteo_lb1_t10_v1.3_202506.nc",
+      "sha256": "efa5e234a015b7e29cc47e4b030af859617cbf550b48efbe0f93e5176e66be09",
+      "expected_intervals": 4320,
+      "observed_intervals": 4320,
+      "missing_intervals": 0,
+      "max_native_offset_s": 0.073242188,
+      "basic_range_audit": {
+        "TA": {
+          "nonfinite": 7064,
+          "finite_outside_basic_range": 0
+        },
+        "TD": {
+          "nonfinite": 7149,
+          "finite_outside_basic_range": 0
+        },
+        "Q": {
+          "nonfinite": 7161,
+          "finite_outside_basic_range": 0
+        },
+        "ZMA": {
+          "nonfinite": 21070,
+          "finite_outside_basic_range": 0
+        }
+      },
+      "status": "processed"
+    },
+    {
+      "month": "2025-07",
+      "filename": "cesar_tower_meteo_lb1_t10_v1.3_202507.nc",
+      "sha256": "4ecbf07b4ef66ba94cea6195531099aefac610c744340e0dcd256fb85cd20866",
+      "expected_intervals": 4464,
+      "observed_intervals": 4464,
+      "missing_intervals": 0,
+      "max_native_offset_s": 0.073242188,
+      "basic_range_audit": {
+        "TA": {
+          "nonfinite": 4475,
+          "finite_outside_basic_range": 0
+        },
+        "TD": {
+          "nonfinite": 4476,
+          "finite_outside_basic_range": 0
+        },
+        "Q": {
+          "nonfinite": 4488,
+          "finite_outside_basic_range": 0
+        },
+        "ZMA": {
+          "nonfinite": 17935,
+          "finite_outside_basic_range": 0
+        }
+      },
+      "status": "processed"
+    },
+    {
+      "month": "2025-08",
+      "filename": "cesar_tower_meteo_lb1_t10_v1.3_202508.nc",
+      "sha256": "24c5122169ccf01dcfd91d756b1c0a56b63228ee5c2321414c6e7a7320421ab8",
+      "expected_intervals": 4464,
+      "observed_intervals": 4464,
+      "missing_intervals": 0,
+      "max_native_offset_s": 0.073242188,
+      "basic_range_audit": {
+        "TA": {
+          "nonfinite": 3335,
+          "finite_outside_basic_range": 0
+        },
+        "TD": {
+          "nonfinite": 3335,
+          "finite_outside_basic_range": 0
+        },
+        "Q": {
+          "nonfinite": 3335,
+          "finite_outside_basic_range": 0
+        },
+        "ZMA": {
+          "nonfinite": 17856,
+          "finite_outside_basic_range": 0
+        }
+      },
+      "status": "processed"
+    },
+    {
+      "month": "2025-09",
+      "filename": "cesar_tower_meteo_lb1_t10_v1.3_202509.nc",
+      "sha256": "412a14a3a6bd83eceb7107e70a81cff9a4b2084600d5fd6434557180e0b33955",
+      "expected_intervals": 4320,
+      "observed_intervals": 4320,
+      "missing_intervals": 0,
+      "max_native_offset_s": 0.073242188,
+      "basic_range_audit": {
+        "TA": {
+          "nonfinite": 40,
+          "finite_outside_basic_range": 0
+        },
+        "TD": {
+          "nonfinite": 40,
+          "finite_outside_basic_range": 0
+        },
+        "Q": {
+          "nonfinite": 54,
+          "finite_outside_basic_range": 0
+        },
+        "ZMA": {
+          "nonfinite": 17292,
+          "finite_outside_basic_range": 0
+        }
+      },
+      "status": "processed"
+    },
+    {
+      "month": "2025-10",
+      "filename": "cesar_tower_meteo_lb1_t10_v1.3_202510.nc",
+      "sha256": "6f39404b86bee102338ead85c839aa0d9898c069484d16492ed401a8366127db",
+      "expected_intervals": 4464,
+      "observed_intervals": 4464,
+      "missing_intervals": 0,
+      "max_native_offset_s": 0.073242188,
+      "basic_range_audit": {
+        "TA": {
+          "nonfinite": 888,
+          "finite_outside_basic_range": 0
+        },
+        "TD": {
+          "nonfinite": 888,
+          "finite_outside_basic_range": 0
+        },
+        "Q": {
+          "nonfinite": 891,
+          "finite_outside_basic_range": 0
+        },
+        "ZMA": {
+          "nonfinite": 20401,
+          "finite_outside_basic_range": 0
+        }
+      },
+      "status": "processed"
+    },
+    {
+      "month": "2025-11",
+      "filename": "cesar_tower_meteo_lb1_t10_v1.3_202511.nc",
+      "sha256": "831e8af0501eed4acf27d3cdbcca001d01315e1a89990353f2b24d5cc71492d0",
+      "expected_intervals": 4320,
+      "observed_intervals": 4320,
+      "missing_intervals": 0,
+      "max_native_offset_s": 0.073242188,
+      "basic_range_audit": {
+        "TA": {
+          "nonfinite": 134,
+          "finite_outside_basic_range": 0
+        },
+        "TD": {
+          "nonfinite": 134,
+          "finite_outside_basic_range": 0
+        },
+        "Q": {
+          "nonfinite": 142,
+          "finite_outside_basic_range": 0
+        },
+        "ZMA": {
+          "nonfinite": 2072,
+          "finite_outside_basic_range": 0
+        }
+      },
+      "status": "processed"
+    },
+    {
+      "month": "2025-12",
+      "filename": "cesar_tower_meteo_lb1_t10_v1.3_202512.nc",
+      "sha256": "740a5ea23888962c3852e1b742ebb2032fe6ff95095aa1add0035d0437c43c44",
+      "expected_intervals": 4464,
+      "observed_intervals": 4464,
+      "missing_intervals": 0,
+      "max_native_offset_s": 0.073242188,
+      "basic_range_audit": {
+        "TA": {
+          "nonfinite": 41,
+          "finite_outside_basic_range": 0
+        },
+        "TD": {
+          "nonfinite": 39,
+          "finite_outside_basic_range": 0
+        },
+        "Q": {
+          "nonfinite": 3623,
+          "finite_outside_basic_range": 0
+        },
+        "ZMA": {
+          "nonfinite": 12,
+          "finite_outside_basic_range": 0
+        }
+      },
+      "status": "processed"
+    }
+  ],
+  "season_groups": [
+    {
+      "season": "DJF",
+      "requested_months": [
+        "2025-01",
+        "2025-02",
+        "2025-12"
+      ],
+      "available_months": [
+        "2025-01",
+        "2025-02",
+        "2025-12"
+      ],
+      "expected_intervals": 12960,
+      "complete_month_group": true,
+      "contiguous_requested_months": false
+    },
+    {
+      "season": "MAM",
+      "requested_months": [
+        "2025-03",
+        "2025-04",
+        "2025-05"
+      ],
+      "available_months": [
+        "2025-03",
+        "2025-04",
+        "2025-05"
+      ],
+      "expected_intervals": 13248,
+      "complete_month_group": true,
+      "contiguous_requested_months": true
+    },
+    {
+      "season": "JJA",
+      "requested_months": [
+        "2025-06",
+        "2025-07",
+        "2025-08"
+      ],
+      "available_months": [
+        "2025-06",
+        "2025-07",
+        "2025-08"
+      ],
+      "expected_intervals": 13248,
+      "complete_month_group": true,
+      "contiguous_requested_months": true
+    },
+    {
+      "season": "SON",
+      "requested_months": [
+        "2025-09",
+        "2025-10",
+        "2025-11"
+      ],
+      "available_months": [
+        "2025-09",
+        "2025-10",
+        "2025-11"
+      ],
+      "expected_intervals": 13104,
+      "complete_month_group": true,
+      "contiguous_requested_months": true
+    }
+  ],
+  "figures": [
+    "figures/01_monthly_temperature.png",
+    "figures/02_monthly_humidity.png",
+    "figures/03_monthly_temperature_differences.png",
+    "figures/04_monthly_visibility_ceiling.png",
+    "figures/05_monthly_dewpoint_excess.png"
+  ],
+  "limitations": [
+    "One site and selected period, not a long-term climate normal.",
+    "Missing months or intervals are not imputed. Seasonal groups pool valid observations rather than monthly medians; autumn may be split across the window.",
+    "No wind analysis or model fitting. Temperature differences are descriptive, not stability classification.",
+    "Visibility ceiling is an instrument limitation; dew point and specific humidity are not independent.",
+    "Local source hashes record reproducibility, not independent provider authentication."
+  ]
+}

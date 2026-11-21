@@ -1,0 +1,40 @@
+{
+  "study_id": "gazebo_environment_screening_v1",
+  "design": "one_factor_at_a_time",
+  "simulator": "gazebo_harmonic_8",
+  "seed": 2026,
+  "reference_world": "sim/gazebo/worlds/rigid_body_lab.sdf",
+  "baseline": {
+    "wind_enu_m_s": [0.0, 0.0, 0.0],
+    "gravity_m_s2": 9.81,
+    "mass_kg": 1.2,
+    "size_xyz_m": [0.48, 0.30, 0.20],
+    "initial_xyz_rpy": [0.0, 0.0, 2.1, 0.18, 0.26, 0.12],
+    "friction": 0.55,
+    "restitution": 0.15,
+    "physics_step_s": 0.001,
+    "wind_force_scale": 1.0,
+    "odometry_noise_std": 0.0
+  },
+  "variations": [
+    {"id": "wind_east_2", "set": {"wind_enu_m_s": [2, 0, 0]}},
+    {"id": "wind_east_4", "set": {"wind_enu_m_s": [4, 0, 0]}},
+    {"id": "wind_east_8", "set": {"wind_enu_m_s": [8, 0, 0]}},
+    {"id": "wind_west_4", "set": {"wind_enu_m_s": [-4, 0, 0]}},
+    {"id": "wind_north_4", "set": {"wind_enu_m_s": [0, 4, 0]}},
+    {"id": "wind_diagonal_4", "set": {"wind_enu_m_s": [2.82842712, 2.82842712, 0]}},
+    {"id": "wind_up_1", "set": {"wind_enu_m_s": [0, 0, 1]}},
+    {"id": "wind_force_half", "set": {"wind_enu_m_s": [4, 0, 0], "wind_force_scale": 0.5}},
+    {"id": "wind_force_double", "set": {"wind_enu_m_s": [4, 0, 0], "wind_force_scale": 2.0}},
+    {"id": "gravity_low", "set": {"gravity_m_s2": 9.70}},
+    {"id": "gravity_high", "set": {"gravity_m_s2": 9.95}},
+    {"id": "mass_low", "set": {"mass_kg": 0.6}},
+    {"id": "mass_high", "set": {"mass_kg": 2.0}},
+    {"id": "attitude_level", "set": {"initial_xyz_rpy": [0, 0, 2.1, 0, 0, 0]}},
+    {"id": "friction_low", "set": {"friction": 0.15}},
+    {"id": "restitution_high", "set": {"restitution": 0.30}},
+    {"id": "step_half", "set": {"physics_step_s": 0.0005}},
+    {"id": "step_double", "set": {"physics_step_s": 0.002}},
+    {"id": "noisy_odometry", "set": {"odometry_noise_std": 0.01}}
+  ]
+}

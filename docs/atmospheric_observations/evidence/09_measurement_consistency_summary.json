@@ -1,0 +1,42 @@
+{
+  "status": "offline_descriptive_measurement_consistency_audit",
+  "source_sha256": "97f6a73542473193e6d6ad7a8c08c59ebe832b1cd3e2706811926c854f16ec0f",
+  "timestamps": 4464,
+  "valid_temperature_dewpoint_pairs": 31194,
+  "positive_excess_count": 1725,
+  "positive_fraction": 0.05529909597999615,
+  "visibility_ceiling_m": 20000.0,
+  "basic_range_audit": {
+    "TA": {
+      "nonfinite": 54,
+      "finite_outside_basic_range": 0
+    },
+    "TD": {
+      "nonfinite": 47,
+      "finite_outside_basic_range": 0
+    },
+    "Q": {
+      "nonfinite": 47,
+      "finite_outside_basic_range": 0
+    },
+    "ZMA": {
+      "nonfinite": 20,
+      "finite_outside_basic_range": 0
+    }
+  },
+  "figures": [
+    "figures/01_dewpoint_thresholds.png",
+    "figures/02_daily_dewpoint_excess.png",
+    "figures/03_excess_full.png",
+    "figures/03_excess_first_72h.png",
+    "figures/04_visibility_ceiling.png"
+  ],
+  "limitations": [
+    "Documented sensor wetting can cause positive dew-point excess; individual causes are not diagnosed.",
+    "Visibility classes describe recorded visibility only; no extrapolation above instrument range.",
+    "Specific humidity is derived and not independent confirmation of dew point.",
+    "Sensitivity thresholds are descriptive and not calibrated uncertainty bounds.",
+    "Nominal heights follow file coordinate; document sensor placement separately.",
+    "No observations modified, no model fitting or operational integration."
+  ]
+}

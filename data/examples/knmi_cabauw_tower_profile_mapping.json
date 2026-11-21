@@ -1,0 +1,10 @@
+{
+  "time": "time",
+  "profile": {
+    "height_coordinate": "z",
+    "speed": "F",
+    "direction_from": "D",
+    "selected_heights_m": [10, 20, 40, 80, 140, 200],
+    "height_tolerance_m": 0.05
+  }
+}

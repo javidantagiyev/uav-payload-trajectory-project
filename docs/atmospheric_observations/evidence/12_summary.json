@@ -1,0 +1,55 @@
+{
+  "status": "descriptive_surface_comparison",
+  "year": 2025,
+  "sites": [
+    "Cabauw",
+    "Hamburg-Fuhlsbuettel",
+    "Lindenberg"
+  ],
+  "rows": 72,
+  "below_90_percent": 2,
+  "sources": [
+    {
+      "file": "results/atmospheric_testbed/6g_stage10/seasonal_climatology_2025/monthly_statistics.csv",
+      "sha256": "af13f4c46bea59f46c064fdc42327981e9e50e2f93d88827ccce3173b900dac3",
+      "kind": "Stage 10 derived monthly statistics"
+    },
+    {
+      "station_id": "01975",
+      "file": "10minutenwerte_TU_01975_20200101_20251231_hist.zip",
+      "sha256": "9c5fc78c452f48c8b21701078b2f3aaa0d68b13b699753ff4df8411cfbc7c7ec",
+      "url": "https://opendata.dwd.de/climate_environment/CDC/observations_germany/climate/10_minutes/air_temperature/historical/10minutenwerte_TU_01975_20200101_20251231_hist.zip",
+      "product_member": "produkt_zehn_min_tu_20200101_20251231_01975.txt",
+      "archive_members": [
+        "produkt_zehn_min_tu_20200101_20251231_01975.txt"
+      ],
+      "quality_code_counts": {
+        "3": 52560
+      }
+    },
+    {
+      "station_id": "03015",
+      "file": "10minutenwerte_TU_03015_20200101_20251231_hist.zip",
+      "sha256": "3f743ebef96aae982664ea05d42cc34f9298f865d97356e089845cb9c7ca645b",
+      "url": "https://opendata.dwd.de/climate_environment/CDC/observations_germany/climate/10_minutes/air_temperature/historical/10minutenwerte_TU_03015_20200101_20251231_hist.zip",
+      "product_member": "produkt_zehn_min_tu_20200101_20251231_03015.txt",
+      "archive_members": [
+        "produkt_zehn_min_tu_20200101_20251231_03015.txt"
+      ],
+      "quality_code_counts": {
+        "3": 52560
+      }
+    }
+  ],
+  "existing_stratification_source": {
+    "file": "results/atmospheric_testbed/6g_stage10/seasonal_climatology_2025/monthly_temperature_differences.csv",
+    "sha256": "a629ecd99ca83fe430f3d637a9e92e513a5fa1a5b78b6b9153aa366351be2d74"
+  },
+  "limitations": [
+    "DWD instantaneous 2 m values and Cabauw nominal 2 m intervals differ in measurement and aggregation.",
+    "DWD dew point derived from temperature and relative humidity; not equivalent independent moisture measurement.",
+    "QN counts retained, not a per-variable error estimate.",
+    "Monthly distributions are descriptive; station siting and missingness may confound differences.",
+    "No independent vertical profile validation; Stage 16 only consolidates existing Cabauw results."
+  ]
+}
